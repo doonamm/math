@@ -52,12 +52,6 @@ ul li{
     overflow: hidden;
     margin: 0 auto;
 }
-/* .demo-list{
-    display: flex;
-    flex-direction: column;
-    background-color: #3e503c;
-    padding: 0 10px;
-} */
 .list{
     position: absolute;
     background-color: #3e503c;
@@ -132,3 +126,62 @@ ul li{
     font-size: 15px;
     text-align: center;
 }    
+
+@media only screen and (max-width: 414px){
+    .score-board{
+        height: 120px;
+        font-size: 54px;
+    }
+    .score{
+        top: 30px;
+        left: 20px;
+    }
+    .best{
+        top: 30px;
+        right: 20px;
+    }
+    .game{
+        width: 860px;
+    }
+    .play-area{
+        width: 840px;
+        height: 900px;
+    }
+    .item .question{
+        width: 360px;
+        line-height: 136px;
+        margin-right: 20px;
+        border-radius: 60px;
+    }
+    .item .answer{
+        font-size: 88px;
+        width: 200px;
+        line-height: 136px;
+        margin-right: 20px;
+    }
+    .item .answer:last-child{
+        margin-right: 0;
+    }
+    .item{
+        font-size: 88px;
+        max-height: 132px;
+        min-height: 132px;
+        margin-bottom: 20px;
+    }
+    .list{
+        padding: 0 20px;
+    }
+    .cover{
+        width: 840px;
+        height: 900px;
+        padding-top: 280px;
+        font-size: 70px;
+    }
+    .play-footer{
+        height: 50px;
+        line-height: 49px;
+    }
+    .author{
+        font-size: 30px;
+    }
+}

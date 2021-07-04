@@ -4,7 +4,16 @@ var list = document.getElementsByClassName("list")[0];
 var myoperator_easy = ['+', '-', 'x'];
 var start = document.getElementsByClassName("cover")[0];
 var score = document.getElementsByClassName("score-value")[0];
-var pos = 75;
+
+const item_once = document.querySelector('.demo-list .item');
+const item_height = parseInt(getComputedStyle(item_once).marginBottom) + item_once.offsetHeight;
+console.log(item_height);
+var max_child_count = 7;
+var speed = 0.5;
+if(item_height >= 150){
+    speed = 1;
+}
+var pos = item_height - 2;
 var miss_question = 0;
 var loop;
 var announce = "restart";
@@ -18,9 +27,9 @@ if(best_str!==null)
 function initQuestion() {
     // list_item.appendChild(createQues());
     list_item.insertBefore(createQues(), list_item.firstChild);
-    pos -= 76;
+    pos -= item_height;
     list.style.top = pos + "px";
-    if(list_item.childElementCount > 7){
+    if(list_item.childElementCount > max_child_count){
 
         let is_pass = list_item.lastChild.getAttribute("passed");
 
@@ -29,7 +38,8 @@ function initQuestion() {
                 miss_question--;
         } else {
             miss_question++;
-            if(miss_question >= 3)
+            console.log(miss_question);
+            if(miss_question >= 4)
             {
                 stopGame();
                 return;
@@ -121,9 +131,9 @@ function startGame(){
         // start.style.zIndex = -1;
         start.style.visibility = "hidden";
         loop = setInterval(function () {
-            if ((pos + 1) % 76 === 0)
+            if ((pos + 1) % item_height === 0)
                 initQuestion();
-            pos += 0.5;
+            pos += speed;
             list.style.top = pos + "px";
         }, 7);
     });
@@ -142,7 +152,7 @@ function stopGame(button = null){
             best.innerHTML = score.innerHTML;
             window.localStorage.setItem("best-score", best.innerHTML);
         }
-    pos = 73;
+    pos = item_height - 2;
     list.style.top = pos + "px";
 
     //reset
