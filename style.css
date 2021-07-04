@@ -128,6 +128,9 @@ ul li{
 }    
 
 @media only screen and (max-device-width: 480px){
+    body{
+        color: green;
+    }
     .score-board{
         height: 120px;
         font-size: 54px;
