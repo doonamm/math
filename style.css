@@ -127,7 +127,7 @@ ul li{
     text-align: center;
 }    
 
-@media only screen and (max-width: 414px){
+@media only screen and (max-device-width: 480px){
     .score-board{
         height: 120px;
         font-size: 54px;
