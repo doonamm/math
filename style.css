@@ -127,10 +127,7 @@ ul li{
     text-align: center;
 }    
 
-@media only screen and (max-device-width: 480px){
-    body{
-        color: green;
-    }
+@media only screen and (max-device-width: 440px){
     .score-board{
         height: 120px;
         font-size: 54px;
@@ -161,6 +158,7 @@ ul li{
         width: 200px;
         line-height: 136px;
         margin-right: 20px;
+        transition-duration: 0.05s;
     }
     .item .answer:last-child{
         margin-right: 0;
