@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: helvetica;
+    font-size: 44px;
+    color: #fff;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    display: flex;
+}
+.game{
+    user-select: none;
+    margin: 0 auto;
+    width: 430px;
+    background-color: #222222;
+    border-radius: 4px;
+}
+.score-board{
+    height: 60px;
+    font-size: 27px;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+}
+.score{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+.score-value{
+    display: inline-block;
+}
+.best{
+    text-align: right;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+.best-value{
+    display: inline-block;
+}
+.play-area{
+    /* border: 1px solid black; */
+    width: 420px;
+    height: 450px;
+    position: relative;
+    background-color: #FFF;
+    overflow: hidden;
+    margin: 0 auto;
+}
+/* .demo-list{
+    display: flex;
+    flex-direction: column;
+    background-color: #3e503c;
+    padding: 0 10px;
+} */
+.list{
+    position: absolute;
+    background-color: #3e503c;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    flex-direction: column;
+}
+.item{
+    /* border: 1px solid red; */
+    margin-bottom: 10px;
+    max-height: 66px;
+    min-height: 66px;
+    /* pointer-events: none; */
+}
+.item .question{
+    background-color: #fff;
+    color: #000;
+    line-height: 68px;
+    letter-spacing: -2px;
+    text-align: center;
+    width: 180px;
+    box-sizing: border-box;
+    margin-right: 10px;
+    border-radius: 30px;
+}
+.item .answer{
+    width: 100px;
+    font-size: 44px;
+    line-height: 68px;
+    margin-right: 10px;
+    background-color: #f3f1e7;
+    color: #000;
+    border: none;
+    transition: background-color 0.2s;
+    border-radius: 2px;
+}
+.item .answer:hover{
+    background-color: #ccc;
+}
+.item .answer:last-child{
+    margin-right: 0px;
+}
+.correct-answer{
+    background-color: lightgreen;
+}
+.cover{
+    position: absolute;
+    background-color: #F8BF80;
+    width: 420px;
+    height: 450px;
+    padding-top: 140px;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: 1;
+    text-align: center;
+    font-size: 35px;
+}
+.cover .content{
+    transition: color 0.1s; 
+    display: inline-block;
+}
+.cover .content:hover{
+    color: black;
+}
+.play-footer{
+    height: 25px;
+    line-height: 24px;
+}
+.play-footer .author{
+    font-size: 15px;
+    text-align: center;
+}    
